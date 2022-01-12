@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import PokemonList from "../components/PokemonList";
+import Header from "../components/Header";
+import PokemonCard from "../components/PokemonCard";
 
 const Home = (props) => {
+    const { pokemonDetails} = props
+    
 
     const [selected, setSelected] = useState(null);
 
@@ -14,8 +17,10 @@ const Home = (props) => {
         })
     }
   
+
     return <div>
-        <PokemonList pokelist={props.pokelist} selectPokemon={selectPokemon}/>
+        <Header/>
+        <PokemonCard pokemonDetails={pokemonDetails}/>
     </div>
 }
 

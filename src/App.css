@@ -1,0 +1,15 @@
+/* Home Screen Left-side */
+
+.left-side {
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: aqua;
+}
+.allpokemons {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pokemoncard {
+    width: 250px;
+    height: 250px;
+}
