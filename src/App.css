@@ -1,15 +1,64 @@
-/* Home Screen Left-side */
-
-.left-side {
-    height: 100vh;
-    overflow-y: scroll;
-    background-color: aqua;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
+
+/* Header styling */
+.header { 
+    background-color: aqua;
+    padding: 25px;
+}
+
+.header > center > h1 {
+    font-size: 4em;
+}
+
+/* Home page styling */
 .allpokemons {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90vw;
+    justify-content: center;
 }
+
+/* Pokemoncard styling */
 .pokemoncard {
     width: 250px;
-    height: 250px;
+    height: 275px;
+    border: 2px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.pokemoncard > img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.pokemoncard > h1 {
+    text-transform: capitalize;
+    font-size: 2em;
+    margin: 10px auto 10px;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.25em;
+    text-transform: capitalize;
+}
+
+.pokemonID > span {
+    /* display: flex; */
+    justify-content: flex-end;
+    font-size: 2em;
+    color: whitesmoke;
+    margin-left: 10px;
 }
