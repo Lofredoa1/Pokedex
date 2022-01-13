@@ -10,12 +10,34 @@
 
 /* Header styling */
 .header { 
-    background-color: aqua;
+    background-color: #CC0000;
     padding: 25px;
+    color: white;
 }
 
 .header > center > h1 {
     font-size: 4em;
+    -webkit-text-stroke: 3px #3368B1;
+    color: #FFCB06;
+}
+
+.header > center > h2 {
+    font-size: 1.5em;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+}
+
+div.navlink {
+    font-size: 1.5em;
+    margin: 10px 10px;
+    width: 100px;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 5px;
+    color: black;
 }
 
 /* Home page styling */
@@ -27,10 +49,10 @@
     justify-content: center;
 }
 
-/* Pokemoncard styling */
+/* Home - Pokemoncard styling */
 .pokemoncard {
     width: 250px;
-    height: 275px;
+    height: 300px;
     border: 2px solid black;
     display:flex;
     flex-wrap: wrap;
