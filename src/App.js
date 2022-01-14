@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
-import './App.css';
 import Home from "./pages/Home";
 import MyTeam from "./pages/MyTeam";
 import Pokemon from "./components/Pokemon";
+import './App.css';
 
 function App() {
 
@@ -58,7 +58,6 @@ function App() {
     </div>
     : 
     <div>
-      <h2 style={{textAlign:"center", color: "red"}}>Gotta Catch em All</h2>
       <img src={'https://articles.pokebattler.com/wp-content/uploads/2018/08/pokedex-kanto-1.jpg'}/>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
@@ -8,11 +8,6 @@ const Home = (props) => {
     const { pokemonDetails} = props
 
     let navigate = useNavigate();
-    
-    function currentPokemonID (pokemon) {
-        let pokemonID = pokemon.id
-        return pokemonID
-    }
 
     const typeColors = {
         normal : "#A8A878",
@@ -40,7 +35,6 @@ const Home = (props) => {
             {pokemonDetails.map((pokemon,index) => (
                 <div className="pokemoncard" onClick={() => {
                     props.selectPokemon(pokemon);
-                    currentPokemonID(pokemon);
                     navigate('/current')
                     }} style={{backgroundColor: typeColors[`${pokemon.types[0].type.name}`]}} >
                     <h3 className="pokemonID"><span>#{pokemon.id}</span></h3>
@@ -51,7 +45,10 @@ const Home = (props) => {
                         <h2>{pokemon.types[0].type.name}</h2>
                         {pokemon.types[1] ? <h2 style={{backgroundColor: typeColors[`${pokemon.types[1].type.name}`]}}>{pokemon.types[1].type.name}</h2> : null}
                     </div>
-                    <div onClick={() => props.addToTeam(pokemon)}>Add to Team</div>
+                    <div className="add-button" onClick={() => {
+                        props.addToTeam(pokemon);
+                        alert("Pokemon added to team")
+                        }}>Add to Team</div>
                 </div>
             ))}
         </div>
