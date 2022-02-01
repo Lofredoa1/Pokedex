@@ -52,7 +52,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home pokemonDetails={pokemonDetails} addToTeam={addToTeam} selectPokemon={selectPokemon}/>}/>
-        <Route path='/myteam' element={<MyTeam/>}/>
+        <Route path='/myteam' element={<MyTeam team={team} removeFromTeam={removeFromTeam} selectPokemon={selectPokemon}/>}/>
         <Route path='/current' element={<Pokemon selected={selected}/>}/>
       </Routes>
     </div>

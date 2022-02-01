@@ -33,10 +33,7 @@ const Home = (props) => {
         <Header/>
         <div className="allpokemons">
             {pokemonDetails.map((pokemon,index) => (
-                <div className="pokemoncard" onClick={() => {
-                    props.selectPokemon(pokemon);
-                    navigate('/current')
-                    }} style={{backgroundColor: typeColors[`${pokemon.types[0].type.name}`]}} >
+                <div className="pokemoncard" key={index} style={{backgroundColor: typeColors[`${pokemon.types[0].type.name}`]}} >
                     <h3 className="pokemonID"><span>#{pokemon.id}</span></h3>
                     <img src={pokemon.sprites.front_default} alt="pokemon"/>
                     <div className="info"></div>
@@ -45,10 +42,17 @@ const Home = (props) => {
                         <h2>{pokemon.types[0].type.name}</h2>
                         {pokemon.types[1] ? <h2 style={{backgroundColor: typeColors[`${pokemon.types[1].type.name}`]}}>{pokemon.types[1].type.name}</h2> : null}
                     </div>
-                    <div className="add-button" onClick={() => {
-                        props.addToTeam(pokemon);
-                        alert("Pokemon added to team")
-                        }}>Add to Team</div>
+                    <div className='buttons'>
+                        <div className='info-button' onClick={() => {
+                        props.selectPokemon(pokemon);
+                        navigate('/current')
+                        }}>More info
+                        </div>
+                        <div className="add-remove-button" onClick={() => {
+                            props.addToTeam(pokemon);
+                            alert("Pokemon added to team")
+                            }}>Add to Team</div>
+                    </div>
                 </div>
             ))}
         </div>
