@@ -50,7 +50,8 @@ const Home = (props) => {
                         </div>
                         <div className="add-remove-button" onClick={() => {
                             props.addToTeam(pokemon);
-                            alert("Pokemon added to team")
+                            const capitalzie = (pokemon.name) = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) 
+                            alert(`${capitalzie} has been added to team!`)
                             }}>Add to Team</div>
                     </div>
                 </div>

@@ -6,12 +6,13 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header styling */
 .header { 
     background-color: #CC0000;
-    padding: 25px;
+    padding: 25px 0 15px;
     color: white;
 }
 
@@ -33,7 +34,7 @@
 div.navlink {
     font-size: 1.5em;
     margin: 10px 10px;
-    width: 100px;
+    width: 120px;
     background-color: white;
     border-radius: 0.5em;
     padding: 5px;
@@ -52,7 +53,7 @@ div.navlink {
 /* Home - Pokemoncard styling */
 .pokemoncard {
     width: 250px;
-    height: 340px;
+    height: 350px;
     border: 2px solid black;
     display:flex;
     flex-wrap: wrap;
@@ -134,7 +135,7 @@ div.navlink {
     border: 3px solid black;
     border-radius: 0.25em;
     width: 400px;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
 }
 
 .name-and-imgs {
@@ -161,7 +162,6 @@ div.navlink {
     display: flex;
     justify-content: space-around;
     margin: 10px;
-
 }
 
 
@@ -170,4 +170,37 @@ div.navlink {
     text-transform: capitalize;
     display: flex;
     justify-content: center;
+    margin-bottom: 5px;
+}
+.stats > .types {
+    margin-bottom: 10px;
+}
+
+.base-stats {
+    margin: 10px 20px 0;
+    display: grid;
+    grid-template-columns: .75fr 1fr;
+}
+
+.base-stats > h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-top: 5px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* My Team Page */
+
+.no-team > img{
+    margin: 20px auto;
+    width: 80%;
+    display: block;
+}
+
+.no-team > p {
+    font-size: 2em;
+    text-align: center;
 }

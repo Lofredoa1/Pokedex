@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import "../App.css";
+import Divider from "@material-ui/core/Divider";
 
 function Pokemon(props) {
 
@@ -45,13 +46,14 @@ function Pokemon(props) {
                     <h3 className="type" >Type: <span style={{backgroundColor: typeColors[`${props.selected.types[0].type.name}`]}}>{props.selected.types[0].type.name}</span></h3>
                     {props.selected.types[1] ? <h2 style={{backgroundColor: typeColors[`${props.selected.types[1].type.name}`]}}>{props.selected.types[1].type.name}</h2> : null}
                 </div>
+                <Divider variant='middle' style={{ background: 'white' }}/>
                 <div className="base-stats">
                     <h3>{props.selected.stats[0].stat.name} : {props.selected.stats[0].base_stat}</h3>
-                    <h3>{props.selected.stats[1].stat.name} : {props.selected.stats[1].base_stat}</h3>
-                    <h3>{props.selected.stats[2].stat.name} : {props.selected.stats[2].base_stat}</h3>
-                    <h3>{props.selected.stats[3].stat.name} : {props.selected.stats[3].base_stat}</h3>
-                    <h3>{props.selected.stats[4].stat.name} : {props.selected.stats[4].base_stat}</h3>
                     <h3>{props.selected.stats[5].stat.name} : {props.selected.stats[5].base_stat}</h3>
+                    <h3>{props.selected.stats[1].stat.name} : {props.selected.stats[1].base_stat}</h3>
+                    <h3>{props.selected.stats[3].stat.name} : {props.selected.stats[3].base_stat}</h3>
+                    <h3>{props.selected.stats[2].stat.name} : {props.selected.stats[2].base_stat}</h3>
+                    <h3>{props.selected.stats[4].stat.name} : {props.selected.stats[4].base_stat}</h3>
                 </div>
             </div>
             <button onClick={() => props.handleClick(props.selected)}>

@@ -31,7 +31,7 @@ const MyTeam = (props) => {
     <>
     <Header/>
         {props.team.length > 0 ? 
-        <div className="allpokemons">
+        <div className="allpokemons" style={{marginTop: '20px'}}>
             {props.team.map((pokemon,index) => (
                 <div className="pokemoncard" key={index} style={{backgroundColor: typeColors[`${pokemon.types[0].type.name}`]}} >
                     <h3 className="pokemonID"><span>#{pokemon.id}</span></h3>
@@ -56,9 +56,9 @@ const MyTeam = (props) => {
             ))}
         </div>
         : 
-        <div>
+        <div className='no-team'>
             <img src='https://4.bp.blogspot.com/-d_-chUfrTRI/V5ABhl3Wp_I/AAAAAAAACHU/2zbfrlbMHzoyQk5pmLvYMuLgbRt0A3o5wCLcB/s1600/How%2Bto%2Bcatch%2Ba%2BPokemon.jpg'/>
-            <p>Go Catch Some Pokémon</p>
+            <p>Go Catch Some Pokémon!</p>
             </div>}
     </>
     )
